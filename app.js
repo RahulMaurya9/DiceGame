@@ -11,18 +11,12 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         document.getElementById('dice-1').style = 'block';
         document.querySelector('#dice-0').src = 'dice-' + dice1 + '.png';
         document.querySelector('#dice-1').src = 'dice-' + dice2 + '.png';
-        // if (dice === 6 && lastdice === 6) {
-        //     score[activeplayer] = 0;
-        //     document.querySelector('#score-' + activeplayer).textContent = score[activeplayer];
-        //     NextPlayer();
-        // } else 
         if (dice1 !== 1 && dice2 !== 1) {
             roundscore += dice1+dice2;
             document.querySelector('#current-' + activeplayer).textContent = roundscore;
         } else {
             NextPlayer();
         }
-        // lastdice = dice;
     }
 
 });
@@ -82,8 +76,8 @@ function init() {
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
-    document.getElementById('name-0').textContent = 'Rahul';
-    document.getElementById('name-1').textContent = 'Shivam';
+    document.getElementById('name-0').textContent = 'Player-1';
+    document.getElementById('name-1').textContent = 'Player-2';
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.remove('acitve');
